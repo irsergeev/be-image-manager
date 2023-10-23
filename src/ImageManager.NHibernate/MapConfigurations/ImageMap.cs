@@ -36,7 +36,6 @@ namespace ImageManager.NHibernate.MapConfigurations
 
 			Property(b => b.FileName, x =>
 			{
-				x.Length(50);
 				x.Type(NHibernateUtil.String);
 				x.NotNullable(false);
 				x.Column(nameof(ImageDto.FileName));
