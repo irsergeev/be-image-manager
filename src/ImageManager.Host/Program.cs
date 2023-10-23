@@ -32,13 +32,14 @@ namespace ImageManager.Host
 			builder.Services.AddCors(options =>
 			{
 				options.AddPolicy("AllowLocalhost", policy => policy
-					.WithOrigins("*")
-					.WithMethods("*")
-					.WithHeaders("*"));
+					.AllowAnyOrigin()
+					.AllowAnyHeader()
+					.AllowAnyMethod());
 			});
 
 			var app = builder.Build();
 
+			app.UseCors("AllowLocalhost");
 			app.UseSwagger();
 			app.UseSwaggerUI();
 			app.MapControllers();

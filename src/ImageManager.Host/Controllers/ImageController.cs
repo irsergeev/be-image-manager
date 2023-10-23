@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ImageManager.Host.Controllers
 {
 	[ApiController]
-	[Route("[controller]")]
+	[Route("api/[controller]")]
 	[Produces("application/json")]
 	public class ImageController
 	{
