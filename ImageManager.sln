@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageManager.Host", "src\ImageManager.Host\ImageManager.Host.csproj", "{2EEAF663-7D48-4E9C-9F0A-6CC038435147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.Core", "src\ImageManager.Core\ImageManager.Core.csproj", "{C4AFC125-905C-4CB2-A91E-AB838D819CC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.Repository", "src\ImageManager.Repository\ImageManager.Repository.csproj", "{9C0A70EC-D009-487A-AA55-03730C1128F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.NHibernate.InitTool", "src\ImageManager.NHibernate.InitTool\ImageManager.NHibernate.InitTool.csproj", "{6C4B9549-8530-4B54-94DB-D8637AC503A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatabaseProviders", "DatabaseProviders", "{991E1CDE-9C31-49AB-A05B-8D4A47F18758}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.NHibernate", "src\ImageManager.NHibernate\ImageManager.NHibernate.csproj", "{E5B2199B-4A0E-42A1-B58E-78F939DA1286}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker-compose", "docker-compose", "{6D3EC5C7-FDEE-4950-ABD1-261EEFEC14EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EEAF663-7D48-4E9C-9F0A-6CC038435147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EEAF663-7D48-4E9C-9F0A-6CC038435147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EEAF663-7D48-4E9C-9F0A-6CC038435147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EEAF663-7D48-4E9C-9F0A-6CC038435147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4AFC125-905C-4CB2-A91E-AB838D819CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4AFC125-905C-4CB2-A91E-AB838D819CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4AFC125-905C-4CB2-A91E-AB838D819CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4AFC125-905C-4CB2-A91E-AB838D819CC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0A70EC-D009-487A-AA55-03730C1128F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0A70EC-D009-487A-AA55-03730C1128F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0A70EC-D009-487A-AA55-03730C1128F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0A70EC-D009-487A-AA55-03730C1128F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C4B9549-8530-4B54-94DB-D8637AC503A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C4B9549-8530-4B54-94DB-D8637AC503A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C4B9549-8530-4B54-94DB-D8637AC503A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C4B9549-8530-4B54-94DB-D8637AC503A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5B2199B-4A0E-42A1-B58E-78F939DA1286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5B2199B-4A0E-42A1-B58E-78F939DA1286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5B2199B-4A0E-42A1-B58E-78F939DA1286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5B2199B-4A0E-42A1-B58E-78F939DA1286}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5B2199B-4A0E-42A1-B58E-78F939DA1286} = {991E1CDE-9C31-49AB-A05B-8D4A47F18758}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01C16B19-9D85-4723-B321-8C07B844FD18}
+	EndGlobalSection
+EndGlobal
