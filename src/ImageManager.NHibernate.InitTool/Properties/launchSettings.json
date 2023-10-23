@@ -1,0 +1,8 @@
+﻿{
+	"profiles": {
+		"ImageManager.NHibernate.InitTool": {
+			"commandName": "Project",
+			"commandLineArgs": "--connection-string \"Server=.;Initial Catalog=ImageManagerDocker;User Id=sa;Password=.\""
+		}
+	}
+}
