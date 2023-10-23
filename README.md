@@ -13,4 +13,4 @@ docker compose -f docker.yml build
 docker compose -f docker.yml up
 ```
 
-UI эндпоинтов будет доступно по адресу [_localhost_](http://localhost)
+UI эндпоинтов будет доступно по адресу [_localhost_](http://localhost:60381/swagger/index.html)
