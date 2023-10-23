@@ -1,0 +1,36 @@
+version: '3'
+name: image_manage_backend
+services:
+# ms sql
+  mssql_db:
+    container_name: mssql_db
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    environment:
+      SA_PASSWORD: "av8Tt91Ro&t3p"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "2543:2543"
+# init mssql db stucture
+  init_tool:
+    container_name: init_tool
+    build:
+      context: "../../be-image-manager"
+      dockerfile: ./src/ImageManager.NHibernate.InitTool/Dockerfile
+    depends_on:
+      - mssql_db
+    entrypoint: ["dotnet", "ImageManager.NHibernate.InitTool.dll", "--connection-string"]
+    command: ["Server=mssql_db;Initial Catalog=ImageManager;User Id=sa;Password=av8Tt91Ro&t3p;"]
+#image-manager
+  image-manager-host:
+    container_name: image-manager-host
+    build:
+      context: "../../be-image-manager"
+      dockerfile: ./src/ImageManager.Host/Dockerfile
+    depends_on:
+      - init_tool
+    ports:
+      - '60381:60381'
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "http://+:60381"
+      ConnectionStrings__NHibernate: "Server=mssql_db;Initial Catalog=ImageManager;User Id=sa;Password=av8Tt91Ro&t3p;"

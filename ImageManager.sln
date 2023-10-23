@@ -16,6 +16,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.NHibernate", "src\ImageManager.NHibernate\ImageManager.NHibernate.csproj", "{E5B2199B-4A0E-42A1-B58E-78F939DA1286}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker-compose", "docker-compose", "{6D3EC5C7-FDEE-4950-ABD1-261EEFEC14EC}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose\docker.yml = docker-compose\docker.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
