@@ -67,5 +67,11 @@ namespace ImageManager.Host.Controllers
 		{
 			await _imageService.UpdateCommentAsync(commentModel);
 		}
+
+		[HttpDelete("Comments")]
+		public async Task DeleteComments([FromQuery] long imageId)
+		{
+			await _imageService.DeleteCommentsAsync(imageId);
+		}
 	}
 }

@@ -59,9 +59,7 @@ namespace ImageManager.Core.Services
 				throw new Exception();
 			}
 
-
 			string fileKey = string.Empty;
-			image.CreateAt = DateTime.Now;
 
 			try
 			{
