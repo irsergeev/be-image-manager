@@ -57,6 +57,14 @@ namespace ImageManager.NHibernate
 			});
 		}
 
+		public async Task DeleteAsync(Expression<Func<T, bool>> predicate)
+		{
+			await DoTransactionOperation(async () =>
+			{
+				await _session.Query<T>().Where(predicate).DeleteAsync();
+			});
+		}
+
 		public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
 		{
 			var result = await _session.Query<T>().Where(predicate).ToListAsync();

@@ -106,7 +106,14 @@ namespace ImageManager.Core.Services
 
 		public async Task DeleteImageAsync(long imageId)
 		{
-			await _picturesRepository.DeleteAsync(imageId);
+			var dbImage = await _picturesRepository.GetAsync(imageId);
+			
+			if (dbImage != null)
+			{
+				await _fileStoreProvider.DeleteFileAsync(dbImage.FileKey);
+				await DeleteCommentsAsync(imageId);
+				await _picturesRepository.DeleteAsync(imageId);
+			}
 		}
 
 		public async Task<IEnumerable<CommentModel>> GetCommentsAsync(long imageId)
@@ -115,6 +122,11 @@ namespace ImageManager.Core.Services
 			var comments = _mapper.Map<IEnumerable<CommentModel>>(result);
 
 			return comments;
+		}
+
+		public async Task DeleteCommentsAsync(long imageId)
+		{
+			await _commentRepository.DeleteAsync(c => c.ImageId == imageId);
 		}
 	}
 }

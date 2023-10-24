@@ -6,6 +6,7 @@ namespace ImageManager.Repository
 	{
 		Task<T> GetAsync(TKey id);
 		Task DeleteAsync(TKey id);
+		Task DeleteAsync(Expression<Func<T, bool>> predicate);
 		Task<TKey> CreateAsync(T entity);
 		Task UpdateAsync(T entity);
 		Task<IEnumerable<T>> GetAllAsync();

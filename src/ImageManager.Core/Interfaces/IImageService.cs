@@ -13,5 +13,6 @@ namespace ImageManager.Core.Interfaces
 		Task<long> CreateCommentAsync(CommentModel comment);
 		Task DeleteCommentAsync(long commentId);
 		Task UpdateCommentAsync(CommentModel comment);
+		Task DeleteCommentsAsync(long imageId);
 	}
 }
