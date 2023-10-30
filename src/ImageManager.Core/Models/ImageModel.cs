@@ -12,7 +12,7 @@ namespace ImageManager.Core.Models
 
 		public string Description { get; set; } = string.Empty;
 
-		public DateTime CreateAt { get; set; }
+		public DateTime CreatedAt { get; set; }
 
 		[JsonIgnore]
 		public string FileKey { get; set; } = string.Empty;
